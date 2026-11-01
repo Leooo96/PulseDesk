@@ -1,0 +1,37 @@
+# ---- 源码：闭源，不进仓库 ----
+*.py
+*.cs
+*.spec
+*.csproj
+*.sln
+
+# ---- 构建产物 ----
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+
+# ---- 开发产物 ----
+_sale/
+.probe_bak
+crash.log
+*.log
+
+# ---- 密钥（绝不能进仓库）----
+license_secret.py
+.license_secret_real.py
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 本地配置 ----
+config.json
+*.bak
