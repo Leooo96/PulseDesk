@@ -4,6 +4,16 @@
 
 单文件 16.7MB，双击即用 —— 不用装 Python，不用装 VC++ 运行库，不写注册表。
 
+![总览（6 套皮肤）](docs/05-skins-grid.png)
+
+| 主界面 | 硬件信息页 |
+|---|---|
+| ![主界面](docs/01-overview.png) | ![硬件信息页](docs/02-hardware.png) |
+
+| 网络页 |
+|---|
+| ![网络页](docs/04-network.png) |
+
 ![版本](https://img.shields.io/badge/version-1.0.0-blue)
 ![平台](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-lightgrey)
 ![语言](https://img.shields.io/badge/languages-8-green)
@@ -87,8 +97,14 @@ SHA256：见 Release 页面的 SHA256SUMS.txt
 
 免费版永久免费、无广告、无功能试用期。**只有上面两项锁定**，其余功能两版完全一致。
 
-完整版 $9.99 一次性买断，**购买页即将开放**（建好后会更新在这里）。
-如果你现在就需要完整版，可以先在 [Issues](../../issues) 里留个言。
+完整版 $9.99 一次性买断，**永久授权，不订阅**。
+
+购买方式：在 [Issues](../../issues) 里新建一个 issue，标题写「购买完整版」，
+我会在 24 小时内回复支付方式并把许可证发给你。
+（走 issue 是为了留个记录，也方便你随时找回自己的许可证。）
+
+> 为什么要走 issue 而不是放个购买按钮：这是个刚发布的个人项目，
+> 我不想让你在一个不成熟的支付页上填卡号。issue 里直接对接，出问题能找到人。
 
 ---
 
