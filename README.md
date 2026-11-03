@@ -2,7 +2,7 @@
 
 一款 Windows 桌面系统监控工具。实时查看网速、CPU、内存、GPU，**以及每个软件各占多少网速**（完整版）。
 
-单文件 16.7MB，双击即用 —— 不用装 Python，不用装 VC++ 运行库，不写注册表。
+解压即用，无需安装 —— 不用装 Python，不用装 VC++ 运行库，不写注册表 Run 项。
 
 ![总览（6 套皮肤）](docs/05-skins-grid.png)
 
@@ -14,7 +14,7 @@
 |---|
 | ![网络页](docs/04-network.png) |
 
-![版本](https://img.shields.io/badge/version-1.0.0-blue)
+![版本](https://img.shields.io/badge/version-1.1.0-blue)
 ![平台](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-lightgrey)
 ![语言](https://img.shields.io/badge/languages-8-green)
 ![许可](https://img.shields.io/badge/license-Freeware-orange)
@@ -23,17 +23,31 @@
 
 ## 下载
 
-到 [Releases](../../releases/latest) 页面下载 `PulseDeskFree.exe`，双击运行。
+到 [Releases](../../releases/latest) 页面下载 `PulseDeskFree-win64.zip`，解压后双击里面的 `PulseDeskFree.exe`。
 
 ```
-文件大小：16.66 MB
+压缩包大小：约 16.7 MB
+解压后：PulseDeskFree.exe（3.2 MB）+ _internal/ 依赖目录
 SHA256：见 Release 页面的 SHA256SUMS.txt
 ```
 
-> **首次运行会被 Windows 拦一下**
+> **为什么是 zip 而不是单个 exe**
 >
-> 因为个人项目没有买代码签名证书（¥1200/年），SmartScreen 会提示
+> 早期版本用单文件（onefile）打包，但「单个 exe 自解压 + fork 子进程」
+> 的行为特征会被 Windows Defender 的机器学习模型误判为木马
+> （`Trojan:Win32/Bearfoos.A!ml`）并**直接隔离删除文件**。
+> 改成目录形式（onedir）后不再有自解压和 fork，误报大幅下降。
+>
+> 代价是要解压。**解压后 `PulseDeskFree.exe` 和 `_internal` 目录必须放在一起**，
+> 只拷 exe 出去是跑不起来的。
+
+> **首次运行可能被 Windows 拦一下**
+>
+> 因为个人项目没有买代码签名证书（¥1200/年），SmartScreen 可能提示
 > 「Windows 已保护你的电脑」。点「更多信息」→「仍要运行」即可。
+>
+> 如果 Defender 仍然隔离了文件（误报），把解压目录加进
+> 「Windows 安全中心 → 病毒和威胁防护 → 排除项」即可。
 >
 > 也可以先核对 SHA256SUMS.txt，确认文件没被篡改。
 
@@ -151,7 +165,7 @@ PulseDesk 的定位不太一样：
 
 - 有**硬件信息页**（主板、内存条频率、厂商识别）
 - **8 种界面语言**（TrafficMonitor 主要是中文）
-- **单文件免安装**，不需要额外的运行库
+- **解压即用**，不需要额外的运行库
 - 界面是深色仪表盘风格，悬浮窗支持鼠标穿透
 
 功能上各有取舍，你可以两个都试试。
